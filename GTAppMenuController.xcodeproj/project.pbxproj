@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		992FE577192FCE840032CBFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE576192FCE840032CBFF /* Foundation.framework */; };
+		992FE579192FCE840032CBFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE578192FCE840032CBFF /* CoreGraphics.framework */; };
+		992FE57B192FCE840032CBFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE57A192FCE840032CBFF /* UIKit.framework */; };
+		992FE581192FCE840032CBFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 992FE57F192FCE840032CBFF /* InfoPlist.strings */; };
+		992FE583192FCE840032CBFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE582192FCE840032CBFF /* main.m */; };
+		992FE587192FCE840032CBFF /* GTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE586192FCE840032CBFF /* GTAppDelegate.m */; };
+		992FE58A192FCE840032CBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992FE588192FCE840032CBFF /* Main.storyboard */; };
+		992FE58D192FCE840032CBFF /* GTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE58C192FCE840032CBFF /* GTViewController.m */; };
+		992FE58F192FCE840032CBFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992FE58E192FCE840032CBFF /* Images.xcassets */; };
+		992FE596192FCE840032CBFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE595192FCE840032CBFF /* XCTest.framework */; };
+		992FE597192FCE840032CBFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE576192FCE840032CBFF /* Foundation.framework */; };
+		992FE598192FCE840032CBFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE57A192FCE840032CBFF /* UIKit.framework */; };
+		992FE5A0192FCE840032CBFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 992FE59E192FCE840032CBFF /* InfoPlist.strings */; };
+		992FE5A2192FCE840032CBFF /* GTAppMenuControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE5A1192FCE840032CBFF /* GTAppMenuControllerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		992FE599192FCE840032CBFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 992FE56B192FCE840032CBFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 992FE572192FCE840032CBFF;
+			remoteInfo = GTAppMenuController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		992FE573192FCE840032CBFF /* GTAppMenuController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTAppMenuController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		992FE576192FCE840032CBFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		992FE578192FCE840032CBFF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		992FE57A192FCE840032CBFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		992FE57E192FCE840032CBFF /* GTAppMenuController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTAppMenuController-Info.plist"; sourceTree = "<group>"; };
+		992FE580192FCE840032CBFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		992FE582192FCE840032CBFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		992FE584192FCE840032CBFF /* GTAppMenuController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTAppMenuController-Prefix.pch"; sourceTree = "<group>"; };
+		992FE585192FCE840032CBFF /* GTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAppDelegate.h; sourceTree = "<group>"; };
+		992FE586192FCE840032CBFF /* GTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppDelegate.m; sourceTree = "<group>"; };
+		992FE589192FCE840032CBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		992FE58B192FCE840032CBFF /* GTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTViewController.h; sourceTree = "<group>"; };
+		992FE58C192FCE840032CBFF /* GTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTViewController.m; sourceTree = "<group>"; };
+		992FE58E192FCE840032CBFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		992FE594192FCE840032CBFF /* GTAppMenuControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTAppMenuControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		992FE595192FCE840032CBFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		992FE59D192FCE840032CBFF /* GTAppMenuControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTAppMenuControllerTests-Info.plist"; sourceTree = "<group>"; };
+		992FE59F192FCE840032CBFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		992FE5A1192FCE840032CBFF /* GTAppMenuControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppMenuControllerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		992FE570192FCE840032CBFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE579192FCE840032CBFF /* CoreGraphics.framework in Frameworks */,
+				992FE57B192FCE840032CBFF /* UIKit.framework in Frameworks */,
+				992FE577192FCE840032CBFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992FE591192FCE840032CBFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE596192FCE840032CBFF /* XCTest.framework in Frameworks */,
+				992FE598192FCE840032CBFF /* UIKit.framework in Frameworks */,
+				992FE597192FCE840032CBFF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		992FE56A192FCE840032CBFF = {
+			isa = PBXGroup;
+			children = (
+				992FE57C192FCE840032CBFF /* GTAppMenuController */,
+				992FE59B192FCE840032CBFF /* GTAppMenuControllerTests */,
+				992FE575192FCE840032CBFF /* Frameworks */,
+				992FE574192FCE840032CBFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		992FE574192FCE840032CBFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				992FE573192FCE840032CBFF /* GTAppMenuController.app */,
+				992FE594192FCE840032CBFF /* GTAppMenuControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		992FE575192FCE840032CBFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				992FE576192FCE840032CBFF /* Foundation.framework */,
+				992FE578192FCE840032CBFF /* CoreGraphics.framework */,
+				992FE57A192FCE840032CBFF /* UIKit.framework */,
+				992FE595192FCE840032CBFF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		992FE57C192FCE840032CBFF /* GTAppMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				992FE585192FCE840032CBFF /* GTAppDelegate.h */,
+				992FE586192FCE840032CBFF /* GTAppDelegate.m */,
+				992FE588192FCE840032CBFF /* Main.storyboard */,
+				992FE58B192FCE840032CBFF /* GTViewController.h */,
+				992FE58C192FCE840032CBFF /* GTViewController.m */,
+				992FE58E192FCE840032CBFF /* Images.xcassets */,
+				992FE57D192FCE840032CBFF /* Supporting Files */,
+			);
+			path = GTAppMenuController;
+			sourceTree = "<group>";
+		};
+		992FE57D192FCE840032CBFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				992FE57E192FCE840032CBFF /* GTAppMenuController-Info.plist */,
+				992FE57F192FCE840032CBFF /* InfoPlist.strings */,
+				992FE582192FCE840032CBFF /* main.m */,
+				992FE584192FCE840032CBFF /* GTAppMenuController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		992FE59B192FCE840032CBFF /* GTAppMenuControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				992FE5A1192FCE840032CBFF /* GTAppMenuControllerTests.m */,
+				992FE59C192FCE840032CBFF /* Supporting Files */,
+			);
+			path = GTAppMenuControllerTests;
+			sourceTree = "<group>";
+		};
+		992FE59C192FCE840032CBFF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				992FE59D192FCE840032CBFF /* GTAppMenuControllerTests-Info.plist */,
+				992FE59E192FCE840032CBFF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		992FE572192FCE840032CBFF /* GTAppMenuController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992FE5A5192FCE840032CBFF /* Build configuration list for PBXNativeTarget "GTAppMenuController" */;
+			buildPhases = (
+				992FE56F192FCE840032CBFF /* Sources */,
+				992FE570192FCE840032CBFF /* Frameworks */,
+				992FE571192FCE840032CBFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTAppMenuController;
+			productName = GTAppMenuController;
+			productReference = 992FE573192FCE840032CBFF /* GTAppMenuController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		992FE593192FCE840032CBFF /* GTAppMenuControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992FE5A8192FCE840032CBFF /* Build configuration list for PBXNativeTarget "GTAppMenuControllerTests" */;
+			buildPhases = (
+				992FE590192FCE840032CBFF /* Sources */,
+				992FE591192FCE840032CBFF /* Frameworks */,
+				992FE592192FCE840032CBFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				992FE59A192FCE840032CBFF /* PBXTargetDependency */,
+			);
+			name = GTAppMenuControllerTests;
+			productName = GTAppMenuControllerTests;
+			productReference = 992FE594192FCE840032CBFF /* GTAppMenuControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		992FE56B192FCE840032CBFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Gianluca Tursi";
+				TargetAttributes = {
+					992FE593192FCE840032CBFF = {
+						TestTargetID = 992FE572192FCE840032CBFF;
+					};
+				};
+			};
+			buildConfigurationList = 992FE56E192FCE840032CBFF /* Build configuration list for PBXProject "GTAppMenuController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 992FE56A192FCE840032CBFF;
+			productRefGroup = 992FE574192FCE840032CBFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				992FE572192FCE840032CBFF /* GTAppMenuController */,
+				992FE593192FCE840032CBFF /* GTAppMenuControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		992FE571192FCE840032CBFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE58F192FCE840032CBFF /* Images.xcassets in Resources */,
+				992FE581192FCE840032CBFF /* InfoPlist.strings in Resources */,
+				992FE58A192FCE840032CBFF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992FE592192FCE840032CBFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE5A0192FCE840032CBFF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		992FE56F192FCE840032CBFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE583192FCE840032CBFF /* main.m in Sources */,
+				992FE58D192FCE840032CBFF /* GTViewController.m in Sources */,
+				992FE587192FCE840032CBFF /* GTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992FE590192FCE840032CBFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992FE5A2192FCE840032CBFF /* GTAppMenuControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		992FE59A192FCE840032CBFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 992FE572192FCE840032CBFF /* GTAppMenuController */;
+			targetProxy = 992FE599192FCE840032CBFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		992FE57F192FCE840032CBFF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				992FE580192FCE840032CBFF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		992FE588192FCE840032CBFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				992FE589192FCE840032CBFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		992FE59E192FCE840032CBFF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				992FE59F192FCE840032CBFF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		992FE5A3192FCE840032CBFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		992FE5A4192FCE840032CBFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		992FE5A6192FCE840032CBFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GTAppMenuController/GTAppMenuController-Prefix.pch";
+				INFOPLIST_FILE = "GTAppMenuController/GTAppMenuController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		992FE5A7192FCE840032CBFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GTAppMenuController/GTAppMenuController-Prefix.pch";
+				INFOPLIST_FILE = "GTAppMenuController/GTAppMenuController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		992FE5A9192FCE840032CBFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GTAppMenuController.app/GTAppMenuController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GTAppMenuController/GTAppMenuController-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GTAppMenuControllerTests/GTAppMenuControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		992FE5AA192FCE840032CBFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GTAppMenuController.app/GTAppMenuController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GTAppMenuController/GTAppMenuController-Prefix.pch";
+				INFOPLIST_FILE = "GTAppMenuControllerTests/GTAppMenuControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		992FE56E192FCE840032CBFF /* Build configuration list for PBXProject "GTAppMenuController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992FE5A3192FCE840032CBFF /* Debug */,
+				992FE5A4192FCE840032CBFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		992FE5A5192FCE840032CBFF /* Build configuration list for PBXNativeTarget "GTAppMenuController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992FE5A6192FCE840032CBFF /* Debug */,
+				992FE5A7192FCE840032CBFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		992FE5A8192FCE840032CBFF /* Build configuration list for PBXNativeTarget "GTAppMenuControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992FE5A9192FCE840032CBFF /* Debug */,
+				992FE5AA192FCE840032CBFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 992FE56B192FCE840032CBFF /* Project object */;
+}
