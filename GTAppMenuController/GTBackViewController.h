@@ -1,5 +1,5 @@
 //
-//  GTAppDelegate.h
+//  GTBackViewController.h
 //  GTAppMenuController
 //
 //  Created by Gianluca Tursi on 23/05/14.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GTAppDelegate : UIResponder <UIApplicationDelegate>
+@interface GTBackViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (strong,nonatomic) IBOutlet UITableView *table;
+- (IBAction)push:(id)sender;
 @property (strong, nonatomic) UIWindow *frontWindow;
-@property (strong, nonatomic) UIWindow *backWindow;
+
 @end

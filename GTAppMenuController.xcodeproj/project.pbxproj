@@ -14,13 +14,22 @@
 		992FE583192FCE840032CBFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE582192FCE840032CBFF /* main.m */; };
 		992FE587192FCE840032CBFF /* GTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE586192FCE840032CBFF /* GTAppDelegate.m */; };
 		992FE58A192FCE840032CBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992FE588192FCE840032CBFF /* Main.storyboard */; };
-		992FE58D192FCE840032CBFF /* GTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE58C192FCE840032CBFF /* GTViewController.m */; };
 		992FE58F192FCE840032CBFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992FE58E192FCE840032CBFF /* Images.xcassets */; };
 		992FE596192FCE840032CBFF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE595192FCE840032CBFF /* XCTest.framework */; };
 		992FE597192FCE840032CBFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE576192FCE840032CBFF /* Foundation.framework */; };
 		992FE598192FCE840032CBFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992FE57A192FCE840032CBFF /* UIKit.framework */; };
 		992FE5A0192FCE840032CBFF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 992FE59E192FCE840032CBFF /* InfoPlist.strings */; };
 		992FE5A2192FCE840032CBFF /* GTAppMenuControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE5A1192FCE840032CBFF /* GTAppMenuControllerTests.m */; };
+		992FE5AD192FCF910032CBFF /* GTFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE5AC192FCF910032CBFF /* GTFrontViewController.m */; };
+		992FE5B0192FCF990032CBFF /* GTBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992FE5AF192FCF990032CBFF /* GTBackViewController.m */; };
+		99460A311930F62E0022C768 /* GTAppMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99460A301930F62E0022C768 /* GTAppMenuController.m */; };
+		99761575193105FE00036F4F /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 99761574193105FE00036F4F /* background.png */; };
+		99761577193107C800036F4F /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99761576193107C800036F4F /* profile.jpg */; };
+		997615811931092A00036F4F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157A1931092A00036F4F /* 2.png */; };
+		997615831931092A00036F4F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157C1931092A00036F4F /* 1.png */; };
+		997615841931092A00036F4F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157D1931092A00036F4F /* 4.png */; };
+		997615851931092A00036F4F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157E1931092A00036F4F /* 3.png */; };
+		997615861931092A00036F4F /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157F1931092A00036F4F /* 5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +54,25 @@
 		992FE585192FCE840032CBFF /* GTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTAppDelegate.h; sourceTree = "<group>"; };
 		992FE586192FCE840032CBFF /* GTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppDelegate.m; sourceTree = "<group>"; };
 		992FE589192FCE840032CBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		992FE58B192FCE840032CBFF /* GTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTViewController.h; sourceTree = "<group>"; };
-		992FE58C192FCE840032CBFF /* GTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTViewController.m; sourceTree = "<group>"; };
 		992FE58E192FCE840032CBFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		992FE594192FCE840032CBFF /* GTAppMenuControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTAppMenuControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		992FE595192FCE840032CBFF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		992FE59D192FCE840032CBFF /* GTAppMenuControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GTAppMenuControllerTests-Info.plist"; sourceTree = "<group>"; };
 		992FE59F192FCE840032CBFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		992FE5A1192FCE840032CBFF /* GTAppMenuControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTAppMenuControllerTests.m; sourceTree = "<group>"; };
+		992FE5AB192FCF910032CBFF /* GTFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFrontViewController.h; sourceTree = "<group>"; };
+		992FE5AC192FCF910032CBFF /* GTFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFrontViewController.m; sourceTree = "<group>"; };
+		992FE5AE192FCF990032CBFF /* GTBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTBackViewController.h; sourceTree = "<group>"; };
+		992FE5AF192FCF990032CBFF /* GTBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTBackViewController.m; sourceTree = "<group>"; };
+		99460A2F1930F62E0022C768 /* GTAppMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAppMenuController.h; sourceTree = "<group>"; };
+		99460A301930F62E0022C768 /* GTAppMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAppMenuController.m; sourceTree = "<group>"; };
+		99761574193105FE00036F4F /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		99761576193107C800036F4F /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
+		9976157A1931092A00036F4F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		9976157C1931092A00036F4F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		9976157D1931092A00036F4F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		9976157E1931092A00036F4F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		9976157F1931092A00036F4F /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +132,17 @@
 		992FE57C192FCE840032CBFF /* GTAppMenuController */ = {
 			isa = PBXGroup;
 			children = (
+				997615781931092400036F4F /* images */,
+				992FE58E192FCE840032CBFF /* Images.xcassets */,
+				992FE588192FCE840032CBFF /* Main.storyboard */,
 				992FE585192FCE840032CBFF /* GTAppDelegate.h */,
 				992FE586192FCE840032CBFF /* GTAppDelegate.m */,
-				992FE588192FCE840032CBFF /* Main.storyboard */,
-				992FE58B192FCE840032CBFF /* GTViewController.h */,
-				992FE58C192FCE840032CBFF /* GTViewController.m */,
-				992FE58E192FCE840032CBFF /* Images.xcassets */,
+				99460A2F1930F62E0022C768 /* GTAppMenuController.h */,
+				99460A301930F62E0022C768 /* GTAppMenuController.m */,
+				992FE5AB192FCF910032CBFF /* GTFrontViewController.h */,
+				992FE5AC192FCF910032CBFF /* GTFrontViewController.m */,
+				992FE5AE192FCF990032CBFF /* GTBackViewController.h */,
+				992FE5AF192FCF990032CBFF /* GTBackViewController.m */,
 				992FE57D192FCE840032CBFF /* Supporting Files */,
 			);
 			path = GTAppMenuController;
@@ -150,6 +175,20 @@
 				992FE59E192FCE840032CBFF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		997615781931092400036F4F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				99761574193105FE00036F4F /* background.png */,
+				99761576193107C800036F4F /* profile.jpg */,
+				9976157C1931092A00036F4F /* 1.png */,
+				9976157A1931092A00036F4F /* 2.png */,
+				9976157E1931092A00036F4F /* 3.png */,
+				9976157D1931092A00036F4F /* 4.png */,
+				9976157F1931092A00036F4F /* 5.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +268,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997615811931092A00036F4F /* 2.png in Resources */,
+				997615831931092A00036F4F /* 1.png in Resources */,
+				997615841931092A00036F4F /* 4.png in Resources */,
 				992FE58F192FCE840032CBFF /* Images.xcassets in Resources */,
+				99761575193105FE00036F4F /* background.png in Resources */,
 				992FE581192FCE840032CBFF /* InfoPlist.strings in Resources */,
+				997615861931092A00036F4F /* 5.png in Resources */,
+				99761577193107C800036F4F /* profile.jpg in Resources */,
+				997615851931092A00036F4F /* 3.png in Resources */,
 				992FE58A192FCE840032CBFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				992FE583192FCE840032CBFF /* main.m in Sources */,
-				992FE58D192FCE840032CBFF /* GTViewController.m in Sources */,
+				992FE5AD192FCF910032CBFF /* GTFrontViewController.m in Sources */,
+				992FE5B0192FCF990032CBFF /* GTBackViewController.m in Sources */,
 				992FE587192FCE840032CBFF /* GTAppDelegate.m in Sources */,
+				99460A311930F62E0022C768 /* GTAppMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +505,7 @@
 				992FE5A7192FCE840032CBFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992FE5A8192FCE840032CBFF /* Build configuration list for PBXNativeTarget "GTAppMenuControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +514,7 @@
 				992FE5AA192FCE840032CBFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

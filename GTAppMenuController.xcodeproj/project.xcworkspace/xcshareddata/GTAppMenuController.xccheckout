@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>99140E9B-4766-4363-B4B7-08C9BA694876</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GTAppMenuController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>98216C08-4C9E-4F1F-B3E5-1EE68F0A48DA</key>
+		<string>https://github.com/gianlucatursi/GTAppMenuController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GTAppMenuController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>98216C08-4C9E-4F1F-B3E5-1EE68F0A48DA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gianlucatursi/GTAppMenuController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>98216C08-4C9E-4F1F-B3E5-1EE68F0A48DA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>98216C08-4C9E-4F1F-B3E5-1EE68F0A48DA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GTAppMenuController</string>
+		</dict>
+	</array>
+</dict>
+</plist>
