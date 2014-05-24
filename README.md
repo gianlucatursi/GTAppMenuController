@@ -26,7 +26,7 @@ This is the most import piece of code:
 
 **GTBackViewController** is the UITableViewController with the cells. **GTAppMenuController** is a UINavigationController (Why? i don't know, I thought it was better to use a navigation controller) and this is the purple view that captures the event of swipe.
 
-It just needs some love from you guys as it has never been tested on a real app. After that, here's my list:
+It just needs some help from you guys. After that, here's my list:
 
 - When select a UITableViewCell push to other View (like Paper)
 - When swipe from Down to Top don't work fine.
