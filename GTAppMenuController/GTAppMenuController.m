@@ -22,6 +22,7 @@
     float firstX;
     float firstY;
     CGPoint _origin;
+    CGPoint _final;
     CGFloat duration;
     
 }
@@ -101,12 +102,22 @@
     CGPoint velocity = [pan velocityInView:self.window];
     
     switch (pan.state) {
+            
         case UIGestureRecognizerStateBegan:
-            _origin = self.view.frame.origin;
+            
+            _origin = self.window.frame.origin;
+            
             break;
         case UIGestureRecognizerStateChanged:
-            if (_origin.y + translation.y >= 0)
-                self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+
+            if (_origin.y + translation.y >= 0){
+
+                if(self.window.frame.origin.y != CGPointZero.y)
+                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+                else
+                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+
+            }
             
             break;
         case UIGestureRecognizerStateEnded:
@@ -114,7 +125,6 @@
         case UIGestureRecognizerStateCancelled:
         {
             CGPoint finalOrigin = CGPointZero;
-            
             if (velocity.y >= 0) {
                 finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - kHeaderHeight;
             }
