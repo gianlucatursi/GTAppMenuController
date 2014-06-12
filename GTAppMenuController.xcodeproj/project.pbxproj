@@ -30,8 +30,6 @@
 		997615841931092A00036F4F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157D1931092A00036F4F /* 4.png */; };
 		997615851931092A00036F4F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157E1931092A00036F4F /* 3.png */; };
 		997615861931092A00036F4F /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157F1931092A00036F4F /* 5.png */; };
-		KIYDQKWBMRKIEYEVRWSLKUDQ /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = HYXIFWTDXJPPRRMDCEPMDTJH /* QuartzCore.framework */; };
-		KNPONLATPTEBRUFEBXNXFHCQ /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = THBDITSPYVFDWQYYBDCIDIXG /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +73,6 @@
 		9976157D1931092A00036F4F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		9976157E1931092A00036F4F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		9976157F1931092A00036F4F /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		HYXIFWTDXJPPRRMDCEPMDTJH /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		QMNTBWVDMICWTEJGUAKXRYSM /* SparkInspector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SparkInspector.framework; path = "/Applications/Spark Inspector.app/Contents/Resources/Frameworks/SparkInspector.framework"; sourceTree = "<group>"; };
-		THBDITSPYVFDWQYYBDCIDIXG /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +83,6 @@
 				992FE579192FCE840032CBFF /* CoreGraphics.framework in Frameworks */,
 				992FE57B192FCE840032CBFF /* UIKit.framework in Frameworks */,
 				992FE577192FCE840032CBFF /* Foundation.framework in Frameworks */,
-				KIYDQKWBMRKIEYEVRWSLKUDQ /* QuartzCore.framework in Frameworks */,
-				KNPONLATPTEBRUFEBXNXFHCQ /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,9 +125,6 @@
 				992FE578192FCE840032CBFF /* CoreGraphics.framework */,
 				992FE57A192FCE840032CBFF /* UIKit.framework */,
 				992FE595192FCE840032CBFF /* XCTest.framework */,
-				HYXIFWTDXJPPRRMDCEPMDTJH /* QuartzCore.framework */,
-				THBDITSPYVFDWQYYBDCIDIXG /* libz.dylib */,
-				QMNTBWVDMICWTEJGUAKXRYSM /* SparkInspector.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -378,7 +368,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Spark Inspector.app/Contents/Resources/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -395,11 +384,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SparkInspector,
-				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -441,15 +425,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = "\"/Applications/Spark Inspector.app/Contents/Resources/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GTAppMenuController/GTAppMenuController-Prefix.pch";
 				INFOPLIST_FILE = "GTAppMenuController/GTAppMenuController-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SparkInspector,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
