@@ -29,7 +29,6 @@ This is the most import piece of code:
 It just needs some help from you guys. After that, here's my list:
 
 - When select a UITableViewCell push to other View (like Paper)
-- When swipe from Down to Top don't work fine.
 - Testing
 
 

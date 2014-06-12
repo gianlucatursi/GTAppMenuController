@@ -22,6 +22,7 @@
     float firstX;
     float firstY;
     CGPoint _origin;
+    CGPoint _final;
     CGFloat duration;
     
 }
@@ -42,31 +43,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.delegate = (((GTAppDelegate*) [UIApplication sharedApplication].delegate));
     self.window = self.delegate.frontWindow;
     self.window.layer.shadowRadius = 5.0f;
     self.window.layer.shadowOffset = CGSizeMake(0,0);
     self.window.layer.shadowColor = [UIColor blackColor].CGColor;
     self.window.layer.shadowOpacity = .9f;
-
+    
     duration = .3f;
 }
 
 -(void)activateSwipeToOpenMenu:(BOOL)onlyNavigation{
-
+    
     _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)];
     if (onlyNavigation == YES) {
         [self.navigationBar addGestureRecognizer:_panGesture];
     }else{
         [self.window addGestureRecognizer:_panGesture];
     }
-
-
+    
+    
     
 }
 -(void)openAndCloseMenu{
-
+    
     
     CGPoint finalOrigin;
     CGRect f = self.window.frame;
@@ -75,7 +76,7 @@
         finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - kHeaderHeight;
     else
         finalOrigin.y = CGPointZero.y;
-
+    
     finalOrigin.x = 0;
     f.origin = finalOrigin;
     [UIView animateWithDuration:.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
@@ -86,7 +87,7 @@
                      } completion:^(BOOL finished) {
                          
                      }];
-
+    
     
 }
 
@@ -101,12 +102,22 @@
     CGPoint velocity = [pan velocityInView:self.window];
     
     switch (pan.state) {
+            
         case UIGestureRecognizerStateBegan:
-            _origin = self.view.frame.origin;
+            
+            _origin = self.window.frame.origin;
+            
             break;
         case UIGestureRecognizerStateChanged:
-            if (_origin.y + translation.y >= 0)
-                self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+            
+            if (_origin.y + translation.y >= 0){
+                
+                if(self.window.frame.origin.y != CGPointZero.y)
+                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+                else
+                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
+                
+            }
             
             break;
         case UIGestureRecognizerStateEnded:
@@ -114,7 +125,6 @@
         case UIGestureRecognizerStateCancelled:
         {
             CGPoint finalOrigin = CGPointZero;
-            
             if (velocity.y >= 0) {
                 finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - kHeaderHeight;
             }
