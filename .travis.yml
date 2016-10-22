@@ -2,3 +2,5 @@ language: objective-c
 xcode_project: GTAppMenuController.xcodeproj
 xcode_scheme: GTAppMenuControllerTests
 xcode_sdk: iphonesimulator
+
+script: xctool -project GTAppMenuController.xcodeproj -scheme GTAppMenuControllerTests -sdk iphonesimulator
