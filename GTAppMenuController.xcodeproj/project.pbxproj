@@ -30,6 +30,8 @@
 		997615841931092A00036F4F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157D1931092A00036F4F /* 4.png */; };
 		997615851931092A00036F4F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157E1931092A00036F4F /* 3.png */; };
 		997615861931092A00036F4F /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9976157F1931092A00036F4F /* 5.png */; };
+		C57A6C671DBB6AA300B518AB /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = C57A6C661DBB6AA300B518AB /* .travis.yml */; };
+		C57A6C681DBB6AA300B518AB /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = C57A6C661DBB6AA300B518AB /* .travis.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		9976157D1931092A00036F4F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		9976157E1931092A00036F4F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		9976157F1931092A00036F4F /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		C57A6C661DBB6AA300B518AB /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,7 @@
 		992FE56A192FCE840032CBFF = {
 			isa = PBXGroup;
 			children = (
+				C57A6C661DBB6AA300B518AB /* .travis.yml */,
 				992FE57C192FCE840032CBFF /* GTAppMenuController */,
 				992FE59B192FCE840032CBFF /* GTAppMenuControllerTests */,
 				992FE575192FCE840032CBFF /* Frameworks */,
@@ -273,6 +277,7 @@
 				997615841931092A00036F4F /* 4.png in Resources */,
 				992FE58F192FCE840032CBFF /* Images.xcassets in Resources */,
 				99761575193105FE00036F4F /* background.png in Resources */,
+				C57A6C671DBB6AA300B518AB /* .travis.yml in Resources */,
 				992FE581192FCE840032CBFF /* InfoPlist.strings in Resources */,
 				997615861931092A00036F4F /* 5.png in Resources */,
 				99761577193107C800036F4F /* profile.jpg in Resources */,
@@ -285,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57A6C681DBB6AA300B518AB /* .travis.yml in Resources */,
 				992FE5A0192FCE840032CBFF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
