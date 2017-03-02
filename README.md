@@ -2,11 +2,14 @@
 
 This is a simple project inspired by **Paper** application of Facebook.
 
+<p align="center"><img src="https://github.com/priore/GTAppMenuController/blob/master/screen_animation.gif"/></p>
+
 Trying Paper Facebook I am impressed by this seemingly Menu where the application appears in full screen, and then if you open the menu appears in the Status Bar.
 
 ## How To Use
 
 This is the most import piece of code:
+
 ```objective-c
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
