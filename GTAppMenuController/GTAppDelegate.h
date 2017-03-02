@@ -10,6 +10,4 @@
 
 @interface GTAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *frontWindow;
-@property (strong, nonatomic) UIWindow *backWindow;
 @end

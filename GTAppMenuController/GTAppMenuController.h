@@ -10,6 +10,11 @@
 
 @interface GTAppMenuController : UINavigationController
 
+@property (nonatomic, assign) CGFloat duration;
+@property (nonatomic, assign) CGFloat headerHeight;
+
++ (void)instantiateFrontViewControllerWithIdentifierPath:(NSString*)front backViewControllerWithIdentifierPath:(NSString*)back;
+
 -(void)activateSwipeToOpenMenu:(BOOL)onlyNavigation;
 -(void)openAndCloseMenu;
 -(void)setAnimationDuration:(CGFloat)d;

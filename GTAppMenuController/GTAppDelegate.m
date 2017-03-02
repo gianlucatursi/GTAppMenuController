@@ -17,19 +17,10 @@
 {
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    UIStoryboard *str = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    GTBackViewController *_back = [str instantiateViewControllerWithIdentifier:@"back"];
-
-    self.backWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.backWindow.rootViewController = _back;
-    [self.backWindow makeKeyAndVisible];
-
-    GTAppMenuController *_front = [str instantiateViewControllerWithIdentifier:@"front"];
-    self.frontWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.frontWindow.rootViewController = _front;
-    self.frontWindow.windowLevel = UIWindowLevelStatusBar;
-    [self.frontWindow makeKeyAndVisible];
- 
+    
+    [GTAppMenuController instantiateFrontViewControllerWithIdentifierPath:@"Main.front"
+                                     backViewControllerWithIdentifierPath:@"Main.back"];
+    
     return YES;
 }
 

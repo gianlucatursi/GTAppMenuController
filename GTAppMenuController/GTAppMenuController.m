@@ -8,12 +8,9 @@
 
 #import "GTAppMenuController.h"
 #import "GTAppDelegate.h"
-#define kHeaderHeight 60
 
 
 @interface GTAppMenuController ()
-@property (strong, nonatomic) GTAppDelegate *delegate;
-@property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 @end
 
@@ -23,20 +20,43 @@
     float firstY;
     CGPoint _origin;
     CGPoint _final;
-    CGFloat duration;
     
+}
+
+static UIWindow *frontWindow;
+static UIWindow *backWindow;
+
++ (void)instantiateFrontViewControllerWithIdentifierPath:(NSString*)front backViewControllerWithIdentifierPath:(NSString*)back
+{
+    NSArray *backPath = [back componentsSeparatedByString:@"."];
+    UIStoryboard *backStoryboard = [UIStoryboard storyboardWithName:[backPath firstObject] bundle:nil];
+    UIViewController *backViewController = [backStoryboard instantiateViewControllerWithIdentifier:[backPath lastObject]];
+    
+    backWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    backWindow.rootViewController = backViewController;
+    [backWindow makeKeyAndVisible];
+    
+    NSArray *frontPath = [front componentsSeparatedByString:@"."];
+    UIStoryboard *frontStoryboard = [UIStoryboard storyboardWithName:[frontPath firstObject] bundle:nil];
+    UIViewController *frontViewController = [frontStoryboard instantiateViewControllerWithIdentifier:[frontPath lastObject]];
+
+    frontWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    frontWindow.rootViewController = frontViewController;
+    frontWindow.windowLevel = UIWindowLevelStatusBar;
+    [frontWindow makeKeyAndVisible];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self = [super initWithCoder:aDecoder]) {
+        self.duration = .3f;
+        self.headerHeight = 60;
     }
+    
     return self;
 }
 
@@ -44,14 +64,11 @@
 {
     [super viewDidLoad];
     
-    self.delegate = (((GTAppDelegate*) [UIApplication sharedApplication].delegate));
-    self.window = self.delegate.frontWindow;
-    self.window.layer.shadowRadius = 5.0f;
-    self.window.layer.shadowOffset = CGSizeMake(0,0);
-    self.window.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.window.layer.shadowOpacity = .9f;
-    
-    duration = .3f;
+    frontWindow.layer.shadowRadius = 5.0f;
+    frontWindow.layer.shadowOffset = CGSizeMake(0,0);
+    frontWindow.layer.shadowColor = [UIColor blackColor].CGColor;
+    frontWindow.layer.shadowOpacity = .9f;
+
 }
 
 -(void)activateSwipeToOpenMenu:(BOOL)onlyNavigation{
@@ -60,7 +77,7 @@
     if (onlyNavigation == YES) {
         [self.navigationBar addGestureRecognizer:_panGesture];
     }else{
-        [self.window addGestureRecognizer:_panGesture];
+        [frontWindow addGestureRecognizer:_panGesture];
     }
     
     
@@ -70,75 +87,78 @@
     
     
     CGPoint finalOrigin;
-    CGRect f = self.window.frame;
+    CGRect f = frontWindow.frame;
     
     if (f.origin.y == CGPointZero.y)
-        finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - kHeaderHeight;
+        finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - self.headerHeight;
     else
         finalOrigin.y = CGPointZero.y;
     
     finalOrigin.x = 0;
     f.origin = finalOrigin;
-    [UIView animateWithDuration:.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+    [UIView animateWithDuration:self.duration
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.window.transform = CGAffineTransformIdentity;
-                         self.window.frame = f;
+                         frontWindow.transform = CGAffineTransformIdentity;
+                         frontWindow.frame = f;
                          
-                     } completion:^(BOOL finished) {
-                         
-                     }];
+                     } completion:nil];
     
     
 }
 
 -(void)setAnimationDuration:(CGFloat)d{
-    duration = d;
+    self.duration = d;
 }
 
 
 - (void)onPan:(UIPanGestureRecognizer *)pan
 {
-    CGPoint translation = [pan translationInView:self.window];
-    CGPoint velocity = [pan velocityInView:self.window];
+    CGPoint translation = [pan translationInView:frontWindow];
+    CGPoint velocity = [pan velocityInView:frontWindow];
     
     switch (pan.state) {
             
         case UIGestureRecognizerStateBegan:
             
-            _origin = self.window.frame.origin;
+            _origin = frontWindow.frame.origin;
             
             break;
         case UIGestureRecognizerStateChanged:
-            
-            if (_origin.y + translation.y >= 0){
+        {
+            CGFloat y = _origin.y + translation.y;
+            if (y >= 0){
+                frontWindow.transform = CGAffineTransformMakeTranslation(0, translation.y);
                 
-                if(self.window.frame.origin.y != CGPointZero.y)
-                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
-                else
-                    self.window.transform = CGAffineTransformMakeTranslation(0, translation.y);
-                
+                CGFloat xscale = 1.0 - (((y * 100.0) / frontWindow.frame.size.height) / 1000.0);
+                frontWindow.rootViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, xscale, 1.0);
             }
-            
+        }
             break;
+            
         case UIGestureRecognizerStateEnded:
             
         case UIGestureRecognizerStateCancelled:
         {
             CGPoint finalOrigin = CGPointZero;
+            CGAffineTransform trasnform = CGAffineTransformIdentity;
             if (velocity.y >= 0) {
-                finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - kHeaderHeight;
+                finalOrigin.y = CGRectGetHeight([UIScreen mainScreen].bounds) - self.headerHeight;
+                 trasnform = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 1.0);;
             }
             
-            CGRect f = self.window.frame;
+            CGRect f = frontWindow.frame;
             f.origin = finalOrigin;
-            [UIView animateWithDuration:.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+            [UIView animateWithDuration:self.duration
+                                  delay:0.0
+                                options:UIViewAnimationOptionCurveEaseOut
                              animations:^{
-                                 self.window.transform = CGAffineTransformIdentity;
-                                 self.window.frame = f;
+                                 frontWindow.transform = CGAffineTransformIdentity;
+                                 frontWindow.frame = f;
+                                 frontWindow.rootViewController.view.transform = trasnform;
                                  
-                             } completion:^(BOOL finished) {
-                                 
-                             }];
+                             } completion:nil];
             
         }
             break;
@@ -147,13 +167,5 @@
             break;
     }
 }
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
