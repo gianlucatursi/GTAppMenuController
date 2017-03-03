@@ -32,6 +32,8 @@ It just needs some help from you guys. After that, here's my list:
 - When select a UITableViewCell push to other View (like Paper)
 - Testing
 
+##Contributors
+-  [priore](https://github.com/priore)
 
 ##Contacts
 
