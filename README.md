@@ -2,25 +2,26 @@
 
 This is a simple project inspired by **Paper** application of Facebook.
 
-![Demo](https://copy.com/DUbjPky6fo1VD40H).
+<p align="center"><img src="https://github.com/priore/GTAppMenuController/blob/master/screen_animation.gif"/></p>
 
 Trying Paper Facebook I am impressed by this seemingly Menu where the application appears in full screen, and then if you open the menu appears in the Status Bar.
 
 ## How To Use
 
 This is the most import piece of code:
-```
-    GTBackViewController *_back = [str instantiateViewControllerWithIdentifier:@"back"];
 
-    self.backWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.backWindow.rootViewController = _back;
-    [self.backWindow makeKeyAndVisible];
+```objective-c
 
-    GTAppMenuController *_front = [str instantiateViewControllerWithIdentifier:@"front"];
-    self.frontWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.frontWindow.rootViewController = _front;
-    self.frontWindow.windowLevel = UIWindowLevelStatusBar;
-    [self.frontWindow makeKeyAndVisible];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    // the path identifier is formed with storyboard name, dot and viewcontroller identifier (eg: Main.mainviewcontroller)
+    [GTAppMenuController instantiateFrontViewControllerWithIdentifierPath:@"Main.front"
+                                     backViewControllerWithIdentifierPath:@"Main.back"];
+    
+    return YES;
+}
  
 ```
 
