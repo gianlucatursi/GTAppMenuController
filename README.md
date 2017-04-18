@@ -1,4 +1,4 @@
-#GTAppMenuController
+# GTAppMenuController
 
 This is a simple project inspired by **Paper** application of Facebook.
 
@@ -32,10 +32,10 @@ It just needs some help from you guys. After that, here's my list:
 - When select a UITableViewCell push to other View (like Paper)
 - Testing
 
-##Contributors
+## Contributors
 -  [priore](https://github.com/priore)
 
-##Contacts
+## Contacts
 
 Gianluca Tursi
 
